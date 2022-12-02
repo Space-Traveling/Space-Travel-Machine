@@ -10,9 +10,9 @@ local UI = game:GetObjects("rbxassetid://11702874365")[1]
 
 local arrows = {}
 
-local function ProtectGui(toProtect)
+local function protect_gui(toProtect)
 	if syn then
-		syn.ProtectGui(toProtect)
+		syn.protect_gui(toProtect)
 		toProtect.Parent = CoreGui
 	else
 		local hui = gethui()
@@ -44,7 +44,7 @@ local function Verify(object)
 			end
 			local newArrow = UI:Clone()
 			newArrow.Adornee = object
-			ProtectGui(newArrow)
+			protect_gui(newArrow)
 			table.insert(arrows, newArrow)
 		end
 	end)
